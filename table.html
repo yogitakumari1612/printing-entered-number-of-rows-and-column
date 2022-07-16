@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+
+<script type="text/javascript">
+function f1()
+{
+row = window.prompt("Input number of rows", 1);
+col = window.prompt("Input number of columns",1);
+
+ for(var r=0;r<parseInt(row,10);r++)
+  {
+   var x=document.getElementById('myTable').insertRow(r);
+   for(var c=0;c<parseInt(col,10);c++)
+    {
+     var y=  x.insertCell(c);
+     y.innerHTML="Row-"+r+" Column-"+c; 
+    }
+   }
+}
+
+</script>
+
+  <head>
+
+  <title>USER WISHED TABLE</title>
+  <style type="text/css">
+  body
+  {
+    background-color: #264248;
+    color:black;
+    text-align: center;
+    padding: auto ;
+  }
+  input
+  {
+    background-color:#fdae38;
+    text-align: center;
+  }
+  </style>
+  </head><body>
+  <table id="myTable" border="1" style="color:black; background-color: lightpink;">
+  </table>
+  <br>
+  <form>
+    <br>
+    <input  type="button" onclick="f1()"  value="Enter Rows and Column">
+
+  </form>
+</body>
+
+
+  </html>
